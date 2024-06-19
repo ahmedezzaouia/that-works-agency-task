@@ -3454,3 +3454,35 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+
+
+
+/* --------- styles for the product page added by Ahmed Ezzaouia ------------ */
+
+/* ----- header style ---- */
+.header__heading-logo {
+    height: 25px;
+    width: 180px;
+}
+
+.header__icon .icon-search{
+  display: none;
+}
+
+#cart-icon-bubble{
+  text-decoration: none;
+  background-color: #0070de;
+  display: flex;
+  gap: 4px;
+  width: 91px;
+  padding: 10px;
+  border-radius: 99px;
+  height: 25px;
+  margin: auto;
+  color: white;
+}
+
+
+
+
+
