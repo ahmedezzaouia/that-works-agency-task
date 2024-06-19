@@ -75,6 +75,10 @@
               assign quantity_rule_soldout = true
             endif
           -%}
+          <span class="variant-price">
+            <span class="variant-compare-price">£459.99 GBP</span>
+            <span class="variant-original-price"> £329 GBP </span>
+          </span>
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
@@ -93,9 +97,11 @@
             </span>
             {%- render 'loading-spinner' -%}
           </button>
-          {%- if show_dynamic_checkout -%}
-            {{ form | payment_button }}
-          {%- endif -%}
+          {% comment %}
+            {%- if show_dynamic_checkout -%}
+              {{ form | payment_button }}
+            {%- endif -%}
+          {% endcomment %}
         </div>
       {%- endform -%}
     </product-form>
