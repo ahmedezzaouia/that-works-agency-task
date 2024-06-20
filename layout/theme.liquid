@@ -283,6 +283,10 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    {% comment %} -------- custom style link added via Ahmed Ezzaouia-------- {% endcomment %}
+     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    {{ 'custom_product_page.css' | asset_url | stylesheet_tag }}
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">

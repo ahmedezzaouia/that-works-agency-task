@@ -92,23 +92,69 @@
       help_text: help_text
     %}
   {%- elsif picker_type == 'button' -%}
-    <input
-      type="radio"
-      id="{{ input_id }}"
-      name="{{ option.name }}"
-      value="{{ value | escape }}"
-      form="{{ product_form_id }}"
-      {% if option.selected_value == value %}
-        checked
-      {% endif %}
-      {% if option_disabled %}
-        class="disabled"
-      {% endif %}
-    >
-    <label for="{{ input_id }}">
-      {{ value -}}
-      {{ label_unavailable }}
-    </label>
+    <span class="radio__button">
+      <input
+        type="radio"
+        class="radio__input"
+        id="{{ input_id }}"
+        name="{{ option.name }}"
+        value="{{ value | escape }}"
+        form="{{ product_form_id }}"
+        {% if option.selected_value == value %}
+          checked
+        {% endif %}
+        {% if option_disabled %}
+          class="disabled"
+        {% endif %}
+      >
+      <label for="{{ input_id }}" class="radio__label">
+        {% assign variant_index = forloop.index | minus: 1 %}
+        {% assign variant = product.variants[variant_index] %}
+        <span class="variant_image">
+          <img src="{{ variant.featured_image.src | img_url: 'medium'}}" alt="{{ variant.featured_image.alt }}">
+        </span>
+        <div class="variant-all-wrapper">
+          <div>
+            {% assign titles = value | split: '/' %}
+            <div class="variant-title">
+               <span class="first-title">{{ titles[0] }}</span>
+              <br>
+              <span class="second-title">{{ titles[1] }}</span>
+              </div>
+            <span class="variant-frature-text"> {{ variant.metafields.custom.description }}</span>
+            {% if variant.metafields.custom.is_popular %}
+              <span class="savings_disc">Most Popular</span>
+            {% endif %}
+          </div>
+          <span class="variant-price">
+            {% if forloop.first == false %}
+              {% assign price_added = variant.price | minus: product.variants[0].price %}
+              <span>+{{ price_added | money_without_trailing_zeros }}</span>
+            {% endif %}
+          </span>
+        </div>
+      </label>
+    </span>
+    {% comment %}
+      <input
+        type="radio"
+          class="radio__input"
+        id="{{ input_id }}"
+        name="{{ option.name }}"
+        value="{{ value | escape }}"
+        form="{{ product_form_id }}"
+        {% if option.selected_value == value %}
+          checked
+        {% endif %}
+        {% if option_disabled %}
+          class="disabled"
+        {% endif %}
+      >
+      <label for="{{ input_id }}">
+        {{ value -}}
+        {{ label_unavailable }}
+      </label>
+    {% endcomment %}
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
       value="{{ value | escape }}"
@@ -130,3 +176,8 @@
     </option>
   {%- endif -%}
 {%- endfor -%}
+
+<script>
+  const variantOptions = {{ product.variants | json }};
+  console.log("🚀 ~ variantOptions:", variantOptions)
+</script>

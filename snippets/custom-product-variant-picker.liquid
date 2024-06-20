@@ -1,6 +1,16 @@
 <div class="product__selectors">
   <div class="selector-wrapper selector-wrapper--boxes" data-option-position="1">
-    <fieldset class="radio__fieldset radio__fieldset--circle">
+
+      <variant-selects
+    id="variant-selects-{{ section.id }}"
+    data-section="{{ section.id }}"
+    data-url="{{ product.url }}"
+    {% if update_url == false %}
+      data-update-url="false"
+    {% endif %}
+    {{ block.shopify_attributes }}
+  >
+    <fieldset class="js product-form__input product-form__input--pill">
       <legend class="radio__legend">
         <span class="radio__legend__label">Choose your sauna</span>
       </legend>
@@ -56,6 +66,7 @@
             ></span>
 
             <span class="variant-all-wrapper">
+
               <span class="variant-price variant-price-free" style="display:none;">Free with chiller</span>
               <span class="variant-title">Red-Light Therapy (660nm)</span>
 
@@ -63,7 +74,6 @@
                 Standard Insulation. Original Steam Device. 660nm Red-Light Exposure.
               </span>
 
-              <span class="savings_txt" style="display:none">Save £210.99 </span>
             </span>
           </label>
         </span>
@@ -96,10 +106,15 @@
               </span>
 
               <span class="savings_txt" style="display:none">Save £210.99 </span>
+              <span class="savings_disc">Most Popular</span>
+
             </span>
           </label>
         </span>
       </div>
     </fieldset>
+
+</variant-selects>
+
   </div>
 </div>

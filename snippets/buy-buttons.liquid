@@ -75,10 +75,15 @@
               assign quantity_rule_soldout = true
             endif
           -%}
-          <span class="variant-price">
-            <span class="variant-compare-price">£459.99 GBP</span>
-            <span class="variant-original-price"> £329 GBP </span>
-          </span>
+      
+           <div class="product_form__price" id="price-{{ section.id }}" role="status">
+                  {%- render 'custom-price',
+                    product: product,
+                    use_variant: true,
+                    show_badges: true,
+                    price_class: 'price--large'
+                  -%}
+                </div>
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
@@ -88,6 +93,7 @@
               disabled
             {% endif %}
           >
+           {% render 'icon-cart' %}
             <span>
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
@@ -97,11 +103,9 @@
             </span>
             {%- render 'loading-spinner' -%}
           </button>
-          {% comment %}
-            {%- if show_dynamic_checkout -%}
-              {{ form | payment_button }}
-            {%- endif -%}
-          {% endcomment %}
+          {% comment %} {%- if show_dynamic_checkout -%}
+            {{ form | payment_button }}
+          {%- endif -%} {% endcomment %}
         </div>
       {%- endform -%}
     </product-form>

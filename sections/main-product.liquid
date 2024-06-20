@@ -85,12 +85,27 @@
                   {% render 'product-media-gallery', variant_images: variant_images %}
                 </div>
               {%- when 'text' -%}
+                <div class="product_text__custom">
+                
                 <p
                   class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
                   {{ block.shopify_attributes }}
                 >
                   {{- block.settings.text -}}
+                  <div>
+                  <img src="{{ 'BuzzFeed logo.png' | asset_url}}">
+                  </div>
+                  <div>
+                  <img src="{{ 'Healthline_logo.png' | asset_url}}">
+                  </div>
+
+                  <div>
+                  <img src="{{ 'MensHealth logo.png' | asset_url}}">
+                  </div>
+
                 </p>
+                  </div>
+
               {%- when 'title' -%}
                 <div class="product__title custom" {{ block.shopify_attributes }}>
                   <h1>{{ product.title | escape }}</h1>
@@ -451,7 +466,7 @@
                 %}
 
               {%- when 'variant_picker' -%}
-                {% render 'custom-product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
