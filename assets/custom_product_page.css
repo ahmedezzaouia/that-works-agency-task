@@ -1,14 +1,20 @@
-
-
-                
 /* ----- header  section style ---- */
+.header {
+  padding: 10px 1rem 10px 2rem !important;
+}
 .header__heading-logo {
-  height: 25px;
   width: 180px;
 }
-
+.header__search {
+  display: none;
+}
 .header__icon .icon-search {
   display: none;
+}
+.header__icon .header_cart_text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.09px;
 }
 
 #cart-icon-bubble {
@@ -16,7 +22,7 @@
   background-color: #0070de;
   display: flex;
   gap: 4px;
-  width: 91px;
+  width: 100px;
   padding: 10px;
   border-radius: 99px;
   height: 25px;
@@ -28,15 +34,10 @@
 .product-custom_rating .rating {
   background: #f8f9fa;
   padding: 6px 10px 6px 10px;
-  border-radius: 5px 0px 0px 0px;
-  -webkit-border-radius: 5px 0px 0px 0px;
-  -moz-border-radius: 5px 0px 0px 0px;
-  -ms-border-radius: 5px 0px 0px 0px;
-  -o-border-radius: 5px 0px 0px 0px;
+  border-radius: 5px;
+  font-size: 11px;
 }
 .product__title h1 {
-  all: unset;
-  font-family: Helvetica Neue;
   font-size: 24px;
   font-weight: 700;
   line-height: 26.64px;
@@ -45,7 +46,6 @@
 }
 
 .product__description {
-  font-family: Helvetica Neue;
   font-size: 12px;
   font-weight: 400;
   line-height: 17.28px;
@@ -90,18 +90,17 @@ button.slider-button--prev {
 
 /* ----------------- product slider style end ---------------- */
 
-
-.product_text__custom{
+#product_text__custom {
   display: flex;
-    gap: 8px;
-    align-items: end;
-    margin: 0;
-    padding: 0;
-    /* font-family: Helvetica Neue; */
-font-size: 14px;
-font-weight: 400;
-line-height: 10.74px;
+  gap: 8px;
+  align-items: end;
+  margin: 0;
+  padding: 0;
 
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 10.74px;
+  margin-bottom: 30px;
 }
 
 /* ----------------- variant selector style start ---------------- */
@@ -236,28 +235,28 @@ input[type="radio"] {
   opacity: 0.8;
 }
 
-
 .selector-wrapper .variant-options .radio__label .savings_disc {
-  border-radius: 0 6px 0 10px;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 6px;
   position: absolute;
   right: 0;
   top: 0;
   background-color: #0070de;
   color: #fff;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 9.77px;
+  padding: 6px 5px 6px 5px;
+  border-radius: 4px;
+  width: 96px;
+  height: 18px;
+  text-align: center;
 }
-
-
 
 .variant-options .radio__button .radio__label:active,
 .variant-options .radio__button .radio__label:focus,
 .variant-options .radio__button input:checked ~ .radio__label {
-  background-color: #f4f4f4 !important;
+  background-color: transparent;
   border: 0.1rem solid #566ebc !important;
-  border-image: initial initial initial initial initial !important;
-  color: #000 !important;
+  color: #000 !;
 }
 
 .variant-options .radio__button .radio__label:active,
@@ -319,7 +318,7 @@ span.radio__legend__label {
 
 .selector-wrapper .variant-options .variant-price {
   color: gray;
-font-size: 12px !important;
+  font-size: 12px !important;
   font-weight: 700 !important;
   max-width: 74%;
 }
@@ -352,30 +351,29 @@ font-size: 12px !important;
   align-items: center;
 }
 
-.selector-wrapper legend ~ .variant-options .radio__button .radio__label .variant-all-wrapper .variant-price span{
+.selector-wrapper legend ~ .variant-options .radio__button .radio__label .variant-all-wrapper .variant-price span {
   width: max-content;
-  /* font-family: Helvetica Neue; */
+  /*  */
   font-size: 12px;
   font-weight: 700;
   line-height: 25.92px;
   text-align: right;
   color: black;
 }
-.selector-wrapper legend ~ .variant-options .radio__button .radio__label .variant-all-wrapper  .second-title{
-/* font-family: Helvetica Neue; */
-font-size: 14px;
-font-weight: 400;
-line-height: 20.16px;
-text-align: left;
-
+.selector-wrapper legend ~ .variant-options .radio__button .radio__label .variant-all-wrapper .second-title {
+  /*  */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.16px;
+  text-align: left;
 }
-.selector-wrapper legend ~ .variant-options .radio__button .radio__label .variant-all-wrapper  .first-title{
-  /* font-family: Helvetica Neue; */
-font-size: 12px;
-font-weight: 700;
-line-height: 17.28px;
-text-align: left;
-color: black;
+.selector-wrapper legend ~ .variant-options .radio__button .radio__label .variant-all-wrapper .first-title {
+  /*  */
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 17.28px;
+  text-align: left;
+  color: black;
 }
 @media only screen and (max-width: 767px) {
   .selector-wrapper legend ~ .variant-options .radio__button .radio__label .variant_image {
@@ -406,10 +404,9 @@ legend {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 .product_form__price .variant-compare-percentange {
-  font-family: Helvetica Neue;
   font-size: 10px;
   font-weight: 500;
   line-height: 12.21px;
@@ -420,7 +417,6 @@ legend {
   border-radius: 4px;
 }
 .product_form__price .variant-original-price {
-  font-family: Helvetica Neue;
   font-size: 18px;
   font-weight: 400;
   line-height: 25.92px;
@@ -429,7 +425,6 @@ legend {
 }
 
 .product_form__price .variant-compare-price {
-  font-family: Helvetica Neue;
   font-size: 14px;
   font-weight: 400;
   line-height: 20.16px;
@@ -441,15 +436,27 @@ legend {
 }
 .product-form__submit {
   background: #0070de;
-  font-family: Helvetica Neue;
   font-size: 14px;
   font-weight: 700;
   line-height: 17.09px;
   text-align: left;
   border: none;
   color: white;
-  width: 203px;
+  width: 50%;
   padding: 14px 30px 14px 30px;
   border-radius: 99px;
   gap: 4px;
+}
+
+.Klarna-widget {
+  background: #f8f9fa;
+  display: flex;
+  padding: 10px 53px 10px 53px;
+  border-radius: 6px;
+}
+
+@media only screen and (min-width: 767px) {
+  product-info.product__info-container, .product__info-wrapper{
+    min-width: 100%;
+  }
 }
