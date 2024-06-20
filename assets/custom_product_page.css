@@ -90,6 +90,12 @@ button.slider-button--next {
 button.slider-button--prev {
   left: 25px;
 }
+ul.custom-slider-first{
+  height: 366px;
+}
+.custom_slider {
+  margin-top: -10px;
+}
 .custom_slider ul {
   gap: 4px;
   margin: 0 12px;
@@ -486,6 +492,12 @@ line-height: 25.92px;
 #custom-price__sale{
   display: flex;
   align-items: center;
+}
+button.thumbnail.global-media-settings img, button.thumbnail[aria-current]{
+  border-radius: 8px;
+}
+.slider-button #icon-caret{
+    height: 9px;
 }
 @media only screen and (min-width: 767px) {
   product-info.product__info-container,
