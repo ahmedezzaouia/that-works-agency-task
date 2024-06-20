@@ -86,25 +86,23 @@
                 </div>
               {%- when 'text' -%}
                 <div class="product_text__custom">
-                
-                <p
-                  class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
-                  {{ block.shopify_attributes }}
-                >
-                  {{- block.settings.text -}}
-                  <div>
-                  <img src="{{ 'BuzzFeed logo.png' | asset_url}}">
-                  </div>
-                  <div>
-                  <img src="{{ 'Healthline_logo.png' | asset_url}}">
-                  </div>
+                  <p
+                    class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                    {{ block.shopify_attributes }}
+                  >
+                    {{- block.settings.text -}}
+                    <div>
+                      <img src="{{ 'BuzzFeed logo.png' | asset_url}}">
+                    </div>
+                    <div>
+                      <img src="{{ 'Healthline_logo.png' | asset_url}}">
+                    </div>
 
-                  <div>
-                  <img src="{{ 'MensHealth logo.png' | asset_url}}">
-                  </div>
-
-                </p>
-                  </div>
+                    <div>
+                      <img src="{{ 'MensHealth logo.png' | asset_url}}">
+                    </div>
+                  </p>
+                </div>
 
               {%- when 'title' -%}
                 <div class="product__title custom" {{ block.shopify_attributes }}>
@@ -478,26 +476,26 @@
               {%- when 'custom_rating' -%}
                 <div class="product-custom_rating">
                   <div class="rating">
-                  <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.5 0L9.67245 4.00987L14.1574 4.83688L11.0151 8.14213L11.6145 12.6631L7.5 10.696L3.3855 12.6631L3.9849 8.14213L0.842604 4.83688L5.32755 4.00987L7.5 0Z" fill="#0070DE"/>
-                  </svg>
-                  <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.5 0L9.67245 4.00987L14.1574 4.83688L11.0151 8.14213L11.6145 12.6631L7.5 10.696L3.3855 12.6631L3.9849 8.14213L0.842604 4.83688L5.32755 4.00987L7.5 0Z" fill="#0070DE"/>
-                  </svg>
+                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.5 0L9.67245 4.00987L14.1574 4.83688L11.0151 8.14213L11.6145 12.6631L7.5 10.696L3.3855 12.6631L3.9849 8.14213L0.842604 4.83688L5.32755 4.00987L7.5 0Z" fill="#0070DE"/>
+                    </svg>
+                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.5 0L9.67245 4.00987L14.1574 4.83688L11.0151 8.14213L11.6145 12.6631L7.5 10.696L3.3855 12.6631L3.9849 8.14213L0.842604 4.83688L5.32755 4.00987L7.5 0Z" fill="#0070DE"/>
+                    </svg>
 
-                  <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.5 0L9.67245 4.00987L14.1574 4.83688L11.0151 8.14213L11.6145 12.6631L7.5 10.696L3.3855 12.6631L3.9849 8.14213L0.842604 4.83688L5.32755 4.00987L7.5 0Z" fill="#0070DE"/>
-                  </svg>
+                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.5 0L9.67245 4.00987L14.1574 4.83688L11.0151 8.14213L11.6145 12.6631L7.5 10.696L3.3855 12.6631L3.9849 8.14213L0.842604 4.83688L5.32755 4.00987L7.5 0Z" fill="#0070DE"/>
+                    </svg>
 
-                  <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.5 0L9.67245 4.00987L14.1574 4.83688L11.0151 8.14213L11.6145 12.6631L7.5 10.696L3.3855 12.6631L3.9849 8.14213L0.842604 4.83688L5.32755 4.00987L7.5 0Z" fill="#0070DE"/>
-                  </svg>
+                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.5 0L9.67245 4.00987L14.1574 4.83688L11.0151 8.14213L11.6145 12.6631L7.5 10.696L3.3855 12.6631L3.9849 8.14213L0.842604 4.83688L5.32755 4.00987L7.5 0Z" fill="#0070DE"/>
+                    </svg>
 
-                  <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.5 0L9.67245 4.00987L14.1574 4.83688L11.0151 8.14213L11.6145 12.6631L7.5 10.696L3.3855 12.6631L3.9849 8.14213L0.842604 4.83688L5.32755 4.00987L7.5 0Z" fill="#0070DE"/>
-                  </svg>
-                  (3740)
-                </div>
+                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.5 0L9.67245 4.00987L14.1574 4.83688L11.0151 8.14213L11.6145 12.6631L7.5 10.696L3.3855 12.6631L3.9849 8.14213L0.842604 4.83688L5.32755 4.00987L7.5 0Z" fill="#0070DE"/>
+                    </svg>
+                    (3740)
+                  </div>
                 </div>
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
