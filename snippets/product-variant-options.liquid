@@ -114,7 +114,7 @@
           <img src="{{ variant.featured_image.src | img_url }}" alt="{{ variant.featured_image.alt }}">
         </span>
         <div class="variant-all-wrapper">
-          <div>
+          <div class="left-box">
             {% assign titles = value | split: '/' %}
             <div class="variant-title">
                <span class="first-title">{{ titles[0] }}</span>
@@ -129,7 +129,7 @@
           <span class="variant-price">
             {% if forloop.first == false %}
               {% assign price_added = variant.price | minus: product.variants[0].price %}
-              <span>+{{ price_added | money_without_trailing_zeros }}</span>
+              +{{ price_added | money_without_trailing_zeros }}
             {% endif %}
           </span>
         </div>
