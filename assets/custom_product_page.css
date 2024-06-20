@@ -1,4 +1,4 @@
-/* ----- header  section style ---- */
+/* ----- header section style start---- */
 .header {
   padding: 10px 1rem 10px 2rem !important;
 }
@@ -29,6 +29,8 @@
   margin: auto;
   color: white;
 }
+
+/* ----- header section styles end ---- */
 
 /* -------- product rating style ------- */
 .product-custom_rating {
@@ -162,19 +164,6 @@ input[type="radio"] {
   z-index: 110;
 }
 
-@media only screen and (max-width: 767px) {
-  .product__selectors {
-    row-gap: 8px;
-  }
-}
-
-@media only screen and (max-width: 479px) {
-  .product__selectors {
-    grid-template-columns: minmax(0, 100%);
-    margin-right: 0;
-  }
-}
-
 .radio__label:hover {
   cursor: pointer;
 }
@@ -199,14 +188,6 @@ input[type="radio"] {
   margin: 0;
   display: flex;
   position: relative;
-}
-
-@media only screen and (max-width: 767px) {
-  .radio__fieldset .radio__label {
-    font-size: calc(0.75rem * 1);
-    line-height: 1.1;
-    min-width: 37px;
-  }
 }
 
 .radio__input {
@@ -396,7 +377,7 @@ legend {
 
 /* ------ varinat selector style end ------- */
 
-/* ------- product buy buttons styles ------- */
+/* ------- product buy buttons styles start ------- */
 
 .product-form__buttons {
   display: flex;
@@ -445,6 +426,7 @@ legend {
   border-radius: 99px;
   gap: 4px;
 }
+/* ------- product buy buttons styles end ------- */
 
 .Klarna-widget {
   background: #f8f9fa;
@@ -489,5 +471,17 @@ button.thumbnail[aria-current] {
   product-info.product__info-container,
   .product__info-wrapper {
     min-width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .product__selectors {
+    row-gap: 8px;
+    grid-template-columns: minmax(0, 100%);
+    margin-right: 0;
+  }
+   .radio__fieldset .radio__label {
+    font-size: calc(0.75rem * 1);
+    line-height: 1.1;
+    min-width: 37px;
   }
 }
