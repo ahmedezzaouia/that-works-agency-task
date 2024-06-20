@@ -92,7 +92,7 @@
       help_text: help_text
     %}
   {%- elsif picker_type == 'button' -%}
-    <span class="radio__button">
+    <span class="radio__button {% if forloop.first %}radio__button-first{% endif %}">
       <input
         type="radio"
         class="radio__input"
@@ -111,7 +111,7 @@
         {% assign variant_index = forloop.index | minus: 1 %}
         {% assign variant = product.variants[variant_index] %}
         <span class="variant_image">
-          <img src="{{ variant.featured_image.src | img_url: 'medium'}}" alt="{{ variant.featured_image.alt }}">
+          <img src="{{ variant.featured_image.src | img_url }}" alt="{{ variant.featured_image.alt }}">
         </span>
         <div class="variant-all-wrapper">
           <div>

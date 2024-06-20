@@ -31,11 +31,20 @@
 }
 
 /* -------- product rating style ------- */
+.product-custom_rating{
+  padding: 0 10px;
+}
 .product-custom_rating .rating {
   background: #f8f9fa;
-  padding: 6px 10px 6px 10px;
-  border-radius: 5px;
   font-size: 11px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-weight: 400;
+  line-height: 13.12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: max-content;
 }
 .product__title h1 {
   font-size: 24px;
@@ -50,6 +59,7 @@
   font-weight: 400;
   line-height: 17.28px;
   text-align: left;
+  padding: 0 10px;
 }
 /* -------- product rating style  end ------- */
 
@@ -59,6 +69,8 @@
   background: #f2f2f3;
   overflow: hidden;
   padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 30px !important
 }
 .slider.slider--mobile .slider__slide {
   margin: 1rem;
@@ -93,16 +105,19 @@ button.slider-button--prev {
 #product_text__custom {
   display: flex;
   gap: 8px;
-  align-items: end;
+  align-items: center;
   margin: 0;
   padding: 0;
-
-  font-size: 14px;
+  font-size: 9px;
   font-weight: 400;
   line-height: 10.74px;
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
+  padding: 0 10px;
 }
-
+#product_text__custom p{
+  margin: 0;
+  padding: 0;
+}
 /* ----------------- variant selector style start ---------------- */
 
 .inherited-styles-for-exported-element {
@@ -265,10 +280,10 @@ input[type="radio"] {
 }
 
 span.radio__legend__label {
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 0.2px;
-  line-height: 28px;
+font-size: 12px;
+font-weight: 700;
+line-height: 17.28px;
+color: #0A0A0A;
 }
 
 .variant-options .radio__button span.label {
@@ -410,11 +425,11 @@ legend {
   font-size: 10px;
   font-weight: 500;
   line-height: 12.21px;
-  text-align: left;
   color: #0070de;
   background: #ecfaff;
   padding: 6px 5px 6px 5px;
   border-radius: 4px;
+  height: fit-content;
 }
 .product_form__price .variant-original-price {
   font-size: 18px;
@@ -454,9 +469,27 @@ legend {
   padding: 10px 53px 10px 53px;
   border-radius: 6px;
 }
-
+.product__title.custom{
+  padding: 0 10px;
+}
+.product__info-container>*+* {
+  margin: 16px 0 !important;
+}
+.variant-options .radio__button-first{
+  padding: 0;
+}
+.custom-price-item{
+font-size: 18px;
+font-weight: 400;
+line-height: 25.92px;
+}
+#custom-price__sale{
+  display: flex;
+  align-items: center;
+}
 @media only screen and (min-width: 767px) {
-  product-info.product__info-container, .product__info-wrapper{
+  product-info.product__info-container,
+  .product__info-wrapper {
     min-width: 100%;
   }
 }
