@@ -284,6 +284,28 @@
       }
     </script>
     {% comment %} -------- custom links added by Ahmed Ezzaouia-------- {% endcomment %}
+    <style>
+      @font-face {
+        font-family: 'Helvetica Neue';
+        src: url({{ "HelveticaNeueLight.otf" | asset_url}}) format('opentype');
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Helvetica Neue';
+        src: url({{ "HelveticaNeueMedium.otf" | asset_url}}) format('opentype');
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Helvetica Neue';
+        src: url({{"HelveticaNeueBold.otf" | asset_url }}) format('opentype');
+        font-weight: 700;
+        font-style: normal;
+      }
+    </style>
     {{ 'custom_product_page.css' | asset_url | stylesheet_tag }}
   </head>
 
