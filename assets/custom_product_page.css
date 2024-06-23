@@ -470,6 +470,11 @@ button.thumbnail[aria-current] {
 .product__info-container product-form.product-form{
   margin: 0;
 }
+.custom-price__sale .price-item{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.16px;
+}
 @media only screen and (min-width: 767px) {
   product-info.product__info-container,
   .product__info-wrapper {
