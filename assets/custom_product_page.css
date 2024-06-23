@@ -454,6 +454,9 @@ legend {
 #custom-price__sale {
   display: flex;
   align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.16px;
 }
 button.thumbnail.global-media-settings img,
 button.thumbnail[aria-current] {
@@ -471,9 +474,7 @@ button.thumbnail[aria-current] {
   margin: 0;
 }
 .custom-price-item .price-item--regular{
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20.16px;
+  
 }
 @media only screen and (min-width: 767px) {
   product-info.product__info-container,
